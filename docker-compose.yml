@@ -1,7 +1,7 @@
 version: '2'
 services:
-  hhvm-source:
-    image: 'crazygoat/hhvm-source'
-    build: .
+  hhvm:
+    image: "crazygoat/hhvm-source"
     volumes:
-     - .hhvm:/hhvm
+     - ./hhvm:/hhvm
+    tty: true
