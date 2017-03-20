@@ -7,10 +7,22 @@ Just a docker container with debian ready to build hhvm. It should be usefull fo
 * lot of time and fast internet conneciion
 
 ## Instalation
-* ```git clone https://github.com/s2x/docker-hhvm-source.git```
-* ```cd docker-hhvm-source```
-* ```git clone git://github.com/facebook/hhvm.git --depth=1``` or ```git clone git://github.com/your-fork/hhvm.git --depth=1```
-* ```cd hhvm```
-* ```git submodule update --init --recursive```
-* ```cd ..```
-* ```docker-composer up```
+* `git clone https://github.com/s2x/docker-hhvm-source.git`
+* `cd docker-hhvm-source`
+* `git clone git://github.com/facebook/hhvm.git --depth=1` or `git clone git://github.com/your-fork/hhvm.git --depth=1`
+* `cd hhvm`
+* `git submodule update --init --recursive`
+* `cd ..`
+* `docker-composer up -d`
+
+## Building
+
+* First check if container is running `docker ps | grep "dockerhhvmsource_hhvm_1"`
+* log in contailer `docker exec -ti dockerhhvmsource_hhvm_1 /bin/bash`
+* `cd /hhvm`
+* `cmake .`
+* `make -j{threads}` for example 4 threads `make -j4`
+
+## Testing
+* `cd /hhvm.hphp`
+* `./hhvm/hhvm test/run test/quick`
