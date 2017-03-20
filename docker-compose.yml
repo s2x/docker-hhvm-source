@@ -1,0 +1,7 @@
+version: '2'
+services:
+  hhvm-source:
+    image: 'crazygoat/hhvm-source'
+    build: .
+    volumes:
+     - .hhvm:/hhvm
