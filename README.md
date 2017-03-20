@@ -3,8 +3,8 @@ Just a docker container with debian ready to build hhvm. It should be usefull fo
 
 ## Requirements
 * git
-* docker and docker-compose
-* lot of time and fast internet conneciion
+* [docker](https://docs.docker.com/engine/installation/#docker-variants) and [docker-compose](https://docs.docker.com/compose/install/)
+* lot of time and fast internet connection
 
 ## Instalation
 * `git clone https://github.com/s2x/docker-hhvm-source.git`
