@@ -13,7 +13,7 @@ Just a docker container with debian ready to build hhvm. It should be usefull fo
 * `cd hhvm`
 * `git submodule update --init --recursive`
 * `cd ..`
-* `docker-composer up -d`
+* `docker-compose up -d`
 
 ## Building
 
